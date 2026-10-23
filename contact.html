@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+  <title>CONTACT | Manami Goto</title>
+  <meta name="description" content="想いをくみ取り、あなたらしいカタチに。Webデザイナー Manami Gotoのポートフォリオ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@400&family=Noto+Serif+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+  <script src="script.js" defer></script>
+  <script src="contact-form.js" defer></script>
+</head>
+<body class="contact-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+        <a href="index.html#top" class="brand" aria-label="Manami Goto トップ"><img src="assets/logo.webp" alt="Manami Goto Web Designer"></a>
+        <nav class="desktop-nav" aria-label="メインナビゲーション"><a href="index.html#concept">CONCEPT</a><a href="about.html">ABOUT</a><a href="index.html#works">WORKS</a><a href="contact.html" aria-current="page">CONTACT</a></nav>
+        <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </header>
+<main id="main" class="page contact-page-content">
+<section class="contact-introduction" aria-labelledby="contact-page-title">
+<h1 id="contact-page-title">CONTACT</h1>
+<p class="contact-intro-pc">Webサイト制作についてのご相談やご質問など、<br>どんな小さなことでもお気軽にお問い合わせください。<br>一つひとつ丁寧にお話を伺い、ご一緒に考えていけたら嬉しいです。</p>
+<p class="contact-intro-sp">Webサイト制作のご相談、お見積り等、どんな小さな事でもお気軽にお尋ねください。</p>
+</section>
+<section class="contact-form-section" aria-label="お問い合わせフォーム">
+<form id="contact-form" novalidate>
+<div class="contact-fields">
+<div class="contact-field"><label for="contact-name">お名前（必須）</label><input id="contact-name" name="name" type="text" autocomplete="name" required placeholder="山田 太郎" aria-describedby="name-error"><p class="field-error" id="name-error" hidden></p></div>
+<div class="contact-field"><label for="contact-email">メールアドレス（必須）</label><input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required placeholder="info@example.com" aria-describedby="email-error"><p class="field-error" id="email-error" hidden></p></div>
+<div class="contact-field"><label for="contact-subject">件名（必須）</label><input id="contact-subject" name="subject" type="text" required placeholder="件名を入力してください" aria-describedby="subject-error"><p class="field-error" id="subject-error" hidden></p></div>
+<div class="contact-field"><label for="contact-message">お問い合わせ内容（必須）</label><textarea id="contact-message" name="message" required placeholder="制作のご依頼、ご相談内容などをご記入ください。" aria-describedby="message-error"></textarea><p class="field-error" id="message-error" hidden></p></div>
+</div>
+<div class="contact-form-actions">
+<button class="contact-submit" id="contact-submit" type="button" disabled>送信する</button>
+<p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+<noscript><p class="delivery-notice">お問い合わせの送信にはJavaScriptを有効にしてください。</p></noscript>
+</div>
+</form>
+</section>
+<footer class="site-footer"><small>© 2026 Manami Goto<span class="sp-only">.</span></small></footer>
+</main>
+<dialog id="mobile-menu" class="mobile-menu" aria-label="メインメニュー">
+    <button class="menu-close" aria-label="メニューを閉じる">✕</button>
+    <nav aria-label="スマートフォンナビゲーション"><a href="index.html#top">TOP</a><a href="about.html">ABOUT</a><a href="contact.html" aria-current="page">CONTACT</a></nav>
+    <p>Manami Goto – Web Designer</p>
+  </dialog>
+</body>
+</html>

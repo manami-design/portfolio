@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manami Goto | Web Designer</title>
+  <meta name="description" content="想いをくみ取り、あなたらしいカタチに。Webデザイナー Manami Gotoのポートフォリオ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@400&family=Noto+Serif+JP:wght@200;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <main id="main" class="page">
+    <section class="hero" id="top" aria-label="Manami Goto ポートフォリオ">
+      <picture class="hero-background"><source media="(max-width: 767px)" srcset="assets/hero-sp.webp"><img src="assets/hero-pc.webp" alt="" fetchpriority="high"></picture>
+      <header class="site-header">
+        <a href="#top" class="brand" aria-label="Manami Goto トップ"><img src="assets/logo.webp" alt="Manami Goto Web Designer"></a>
+        <nav class="desktop-nav" aria-label="メインナビゲーション"><a href="#concept">CONCEPT</a><a href="about.html">ABOUT</a><a href="#works">WORKS</a><a href="contact.html">CONTACT</a></nav>
+        <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </header>
+      <h1 class="hero-title"><img src="assets/portfolio-title.webp" alt="Portfolio 想いをくみ取り、あなたらしいカタチに。"></h1>
+    </section>
+    <section class="concept" id="concept" aria-labelledby="concept-heading">
+      <h2 class="section-heading" id="concept-heading"><span class="section-number">01</span><span class="heading-rule"></span>CONCEPT</h2>
+      <picture class="concept-art"><source media="(max-width: 767px)" srcset="assets/concept-sp.webp"><img src="assets/concept-pc.webp" alt="デザインは、ただ見た目を整えるだけでなく、その人が大切にしている想いや、伝えたいことを丁寧にくみ取ることから始まると考えています。Webデザイナーとして、一歩ずつ学びながら、その人らしさが自然に伝わるデザインを大切にしています。「どうしたら、もっと伝わるだろう？」を一緒に考え、必要なことはきちんとご提案できる、そんなデザイナーでありたいと思っています。お客様の想い一つひとつに丁寧に向き合い、見る人の心にやさしく届くデザインをお届けしていきます。"></picture>
+      <img class="sprig sprig-concept" src="assets/sprig-concept.svg" alt="" loading="lazy">
+    </section>
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <h2 class="section-heading" id="about-heading"><span class="section-number">02</span><span class="heading-rule"></span>ABOUT</h2>
+      <picture class="about-photo"><source media="(max-width: 767px)" srcset="assets/about-sp.webp 110w, assets/about-pc.webp 1547w" sizes="(min-width: 500px) calc(32vw - 20.48px), 110px"><img src="assets/about-pc.webp" alt="窓辺に立つManamiの後ろ姿" loading="lazy"></picture>
+      <p class="about-copy">はじめまして、Manamiです。<span class="desktop-paragraph"></span>SEとしての経験と、長年の接客で培った<span class="desktop-break"></span>「相手の話を聞き、想いをくみ取る力」を活かし、<span class="desktop-break"></span>その人らしさが伝わるデザインを大切にしています。</p>
+      <a class="view-more" href="about.html">View More<span class="desktop-arrow" aria-hidden="true">→</span><img class="mobile-arrow" src="assets/view-more-arrow.svg" alt=""></a>
+      <img class="sprig sprig-about" src="assets/sprig-about.svg" alt="" loading="lazy">
+    </section>
+    <section class="works" id="works" aria-labelledby="works-heading">
+      <h2 class="section-heading" id="works-heading"><span class="section-number">03</span><span class="heading-rule"></span>WORKS</h2>
+      <div class="works-grid">
+        <article class="work-card"><a href="https://canva.link/ldp9gscc989ay23" target="_blank" rel="noopener noreferrer"><div class="work-image"><picture><source media="(max-width: 767px)" srcset="assets/work-canva-sp.webp"><img src="assets/work-canva-pc.webp" alt="Canvaで制作したSNS投稿の作品" loading="lazy"></picture><span class="work-overlay">Graphic Design</span></div><h3><span class="pc-only">01 </span>SNS投稿 （課題）<span class="work-separator"> / </span><span class="work-type">Graphic Design</span></h3></a></article>
+        <article class="work-card"><a href="https://manamihappylife888.wixsite.com/my-site-4" target="_blank" rel="noopener noreferrer"><div class="work-image"><picture><source media="(max-width: 767px)" srcset="assets/work-wix-sp.webp"><img src="assets/work-wix-pc.webp" alt="CO-WORKINGのWebサイト制作作品" loading="lazy"></picture><span class="work-overlay">Web Site</span></div><h3><span class="pc-only">02 </span>CO-WORKING （課題）<span class="work-separator"> / </span><span class="work-type">Web Site</span></h3></a></article>
+        <article class="work-card"><a href="index.html" aria-label="Manami WebDesigner：このサイトのTOPページへ"><div class="work-image"><picture><source media="(max-width: 767px)" srcset="assets/work-portfolio-sp.webp"><img src="assets/work-portfolio-pc.webp" alt="Manamiのポートフォリオサイト" loading="lazy"></picture><span class="work-overlay">Portfolio Site</span></div><h3><span class="pc-only portfolio-work-name">03 Manami WebDesigner</span><span class="sp-only">Manami Portfolio</span><span class="work-separator"> / </span><span class="work-type"><span class="pc-only">Portfolio Site</span><span class="sp-only">Web Site</span></span></h3></a></article>
+      </div>
+      <img class="sprig sprig-works" src="assets/sprig-works.svg" alt="" loading="lazy">
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <picture class="contact-background"><source media="(max-width: 767px)" srcset="assets/contact-sp.webp"><img src="assets/contact-pc.webp" alt="" loading="lazy"></picture>
+      <h2 id="contact-heading"><img src="assets/contact-title.webp" alt="Let’s work together" class="contact-title"><span class="sp-only">CONTACT</span></h2>
+      <p>まずはお気軽にご相談ください<span class="pc-only">。</span></p>
+      <a class="contact-button" href="contact.html">お問い合わせ</a>
+    </section>
+    <footer class="site-footer"><small>© 2026 Manami Goto<span class="sp-only">.</span></small></footer>
+  </main>
+  <dialog id="mobile-menu" class="mobile-menu" aria-label="メインメニュー">
+    <button class="menu-close" aria-label="メニューを閉じる">✕</button>
+    <nav aria-label="スマートフォンナビゲーション"><a href="#top">TOP</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a></nav>
+    <p>Manami Goto – Web Designer</p>
+  </dialog>
+</body>
+</html>

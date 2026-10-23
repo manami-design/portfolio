@@ -1,0 +1,1031 @@
+:root {
+  --ink:#4a4943;
+  --sage:#77816c;
+  --line:#aaa89e;
+  --serif:"Cormorant Garamond",serif;
+  --japanese:"Noto Serif JP",serif
+}
+
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth
+}
+
+body {
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+  font-family:var(--japanese);
+  font-weight:300
+}
+
+a {
+  color:inherit;
+  text-decoration:none
+}
+
+button {
+  font:inherit;
+  color:inherit;
+  cursor:pointer
+}
+
+img {
+  display:block;
+  max-width:100%
+}
+
+h2,h3,p {
+  margin:0
+}
+
+a:focus-visible,button:focus-visible {
+  outline:2px solid var(--sage);
+  outline-offset:5px
+}
+
+.page {
+  max-width:1440px;
+  margin:auto;
+  overflow:hidden
+}
+
+.skip-link {
+  position:fixed;
+  top:8px;
+  left:8px;
+  z-index:10;
+  background:white;
+  padding:8px;
+  transform:translateY(-160%)
+}
+
+.skip-link:focus {
+  transform:none
+}
+
+.hero {
+  height:660px;
+  position:relative;
+  overflow:hidden
+}
+
+.hero-background {
+  position:absolute;
+  inset:0
+}
+
+.hero-background img {
+  position:absolute;
+  width:106.945%;
+  max-width:none;
+  height:auto;
+  aspect-ratio:1540/960;
+  top:auto;
+  bottom:0;
+  left:0;
+  object-fit:cover
+}
+
+.site-header {
+  height:89px;
+  position:absolute;
+  inset:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 11.04% 0 3.194%
+}
+
+.brand {
+  width:234px;
+  flex-shrink:0
+}
+
+.brand img {
+  width:100%;
+  aspect-ratio:3;
+  object-fit:cover
+}
+
+.desktop-nav {
+  display:flex;
+  gap:47px;
+  font:300 12px var(--serif)
+}
+
+.desktop-nav a:hover {
+  color:var(--sage)
+}
+
+/* Absolute positioning keeps the underline from changing navigation geometry. */
+@media (min-width: 768px) {
+  .desktop-nav a {
+    position: relative;
+  }
+
+  .desktop-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 0.5px;
+    background: #AAA89E;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  .desktop-nav a:hover::after,
+  .desktop-nav a:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .desktop-nav a::after {
+    transition: none;
+  }
+}
+
+.menu-toggle {
+  display:none
+}
+
+.hero-title {
+  position:absolute;
+  left:11.32%;
+  top:187px;
+  width:30.278%;
+  height:auto
+}
+
+.section-heading {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  height:76px;
+  font:300 30px var(--serif);
+  letter-spacing:3.36px
+}
+
+.section-number {
+  font:italic 300 26px var(--serif);
+  letter-spacing:0;
+  color:var(--sage)
+}
+
+.heading-rule {
+  width:49px;
+  height:1px;
+  background:var(--line);
+  flex-shrink:0
+}
+
+.concept,.about,.works {
+  position:relative
+}
+
+.concept {
+  height:877px;
+  background:white;
+  padding-top:66px
+}
+
+.concept>.section-heading,.works>.section-heading {
+  margin-left:6.944%
+}
+
+.concept-art {
+  display:block;
+  width:38.125%;
+  margin:35px auto 0
+}
+
+.concept-art img {
+  width:100%;
+  height:auto;
+  aspect-ratio:549/599;
+  object-fit:cover
+}
+
+.sprig {
+  position:absolute;
+  max-width:none;
+  pointer-events:none
+}
+
+.sprig-concept {
+  right:3.4%;
+  bottom:58px;
+  transform:rotate(48deg) skewX(11deg)
+}
+
+.about {
+  height:620px;
+  background:#fcfbf8;
+  padding-top:113px
+}
+
+.about>.section-heading {
+  margin-left:50%
+}
+
+.about-photo {
+  display:block;
+  position:absolute;
+  left:6.944%;
+  top:148px;
+  width:34.306%
+}
+
+.about-photo img {
+  width:100%;
+  aspect-ratio:494/324;
+  object-fit:cover
+}
+
+.about-copy {
+  position:absolute;
+  left:50%;
+  top:230px;
+  width:43.194%;
+  font-size:16px;
+  line-height:28px;
+  letter-spacing:.48px;
+  color:#57554f
+}
+
+.desktop-paragraph {
+  display:block;
+  height:28px
+}
+
+.desktop-break {
+  display:block
+}
+
+.view-more {
+  position:absolute;
+  left:49.93%;
+  top:408px;
+  width:134px;
+  height:34px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  font:300 11px var(--serif);
+  letter-spacing:1.54px;
+  transition: background-color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .view-more:hover {
+    background-color: #D9D4CB;
+  }
+}
+
+.mobile-arrow {
+  display:none
+}
+
+.sprig-about {
+  right:7%;
+  bottom:82px;
+  transform:rotate(38deg) skewX(-8deg)
+}
+
+.works {
+  height:632px;
+  padding-top:100px;
+  background:#fff
+}
+
+.works-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(24px,6.944vw,100px);
+  width:76.389%;
+  margin:36px auto 0;
+  transform:translateX(20px)
+}
+
+.work-card {
+  min-width:0
+}
+
+.work-card picture {
+  display:block
+}
+
+.work-card img {
+  width:100%;
+  aspect-ratio:300/184;
+  object-fit:cover
+}
+
+.work-card h3 {
+  margin-top:16px;
+  font:300 16px/28px var(--japanese);
+  letter-spacing:3.36px;
+  color:#000
+}
+
+.work-type {
+  display:block
+}
+
+/* Keep the desktop portfolio title on one line. */
+@media (min-width: 768px) {
+  .portfolio-work-name {
+    white-space: nowrap;
+  }
+}
+
+.work-separator,.sp-only {
+  display:none
+}
+
+.sprig-works {
+  right:7%;
+  bottom:48px;
+  transform:rotate(39deg) skewX(-7deg)
+}
+
+.contact {
+  position:relative;
+  height:312px;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  overflow:hidden;
+  padding-top:69px;
+  background:#fcfbf8
+}
+
+.contact-background {
+  position:absolute;
+  inset:0;
+  z-index:0;
+  opacity:.62
+}
+
+.contact-background img {
+  position:absolute;
+  width:123%;
+  max-width:none;
+  left:-7.57%;
+  top:-104px;
+  aspect-ratio:1771/590;
+  object-fit:cover
+}
+
+.contact>h2,.contact>p,.contact>a {
+  position:relative
+}
+
+.contact-title {
+  width:320px;
+  height:60px
+}
+
+.contact>p {
+  margin-top:27px;
+  font-size:16px;
+  letter-spacing:1.92px;
+  line-height:23px;
+  color:#57554f
+}
+
+.contact-button {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:157px;
+  height:30px;
+  margin-top:27px;
+  border-radius:17px;
+  background:#a8aa9b;
+  color:#14110D;
+  font-size:10px;
+  letter-spacing:2px
+}
+
+@media (min-width: 768px) and (hover: hover) {
+  .contact-button {
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-button:hover {
+    background-color: #D9D4CB;
+  }
+}
+
+.site-footer {
+  height:79px;
+  border-top:1px solid #d9d6ce;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff
+}
+
+.site-footer small {
+  font:400 12px Inter,sans-serif;
+  color:#77786f
+}
+
+.mobile-menu {
+  border:0;
+  padding:24px;
+  width:min(100%,375px);
+  height:min(479px,100dvh);
+  max-height:100dvh;
+  max-width:100%;
+  margin:0 0 0 auto;
+  position:fixed;
+  inset:0 0 auto auto;
+  border-radius:16px;
+  background:rgba(245,241,232,.93);
+  color:#2b2a26;
+  overflow:auto
+}
+
+.mobile-menu[open] {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between
+}
+
+.mobile-menu::backdrop {
+  background:transparent
+}
+
+.menu-close {
+  align-self:flex-end;
+  border:0;
+  background:none;
+  width:32px;
+  height:32px;
+  font:300 20px var(--serif)
+}
+
+.mobile-menu nav {
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  align-items:center;
+  font:300 24px/29px var(--serif);
+  letter-spacing:3px
+}
+
+.mobile-menu>p {
+  font:300 11px/13px var(--serif);
+  text-align:center;
+  color:#5e5a52
+}
+
+.page-notice {
+  max-width:calc(100% - 40px);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:28px;
+  color:var(--ink);
+  background:#fcfbf8
+}
+
+.page-notice h2 {
+  font-size:18px
+}
+
+.page-notice p {
+  font-size:14px;
+  margin:18px 0
+}
+
+.page-notice button {
+  border:1px solid var(--line);
+  background:white;
+  border-radius:20px;
+  padding:6px 24px
+}
+
+.page-notice::backdrop {
+  background:#0003
+}
+
+body.menu-open {
+  overflow:hidden
+}
+
+
+/* Keep the desktop composition fluid before switching to the SP art direction. */
+@media(min-width:768px) and (max-width:1199px) {
+  .hero {
+  height:clamp(450px,45.833vw,660px)
+}
+
+.hero-title {
+  top:28.33%
+}
+
+.site-header {
+  padding-right:5%
+}
+
+.desktop-nav {
+  gap:clamp(20px,3.26vw,47px)
+}
+
+.brand {
+  width:clamp(160px,16.25vw,234px)
+}
+
+.about-copy {
+  font-size:clamp(12px,1.11vw,16px);
+  width:44%;
+  line-height:1.75
+}
+
+.desktop-break {
+  display:none
+}
+
+.works-grid {
+  width:86%;
+  transform:none;
+  gap:28px
+}
+
+.work-card h3 {
+  font-size:clamp(12px,1.11vw,16px);
+  letter-spacing:1px
+}
+
+.concept-art {
+  width:45%;
+  max-width:549px
+}
+
+.concept {
+  height:auto;
+  min-height:760px;
+  padding-bottom:100px
+}
+
+.sprig {
+  opacity:.8
+}
+
+
+}
+
+
+@media(max-width:767px) {
+  .hero {
+  height:calc(100vw * 376 / 375);
+  max-height:610px
+}
+
+.hero-background img {
+  width:100%;
+  height:104%;
+  aspect-ratio:auto;
+  top:-4.12%;
+  bottom:auto;
+  object-fit:cover
+}
+
+.site-header {
+  height:64px;
+  padding:0 16px 0 0
+}
+
+.brand {
+  width:120px
+}
+
+/* Suppress native tap paint only for mobile logos and contact links. */
+.brand, .contact-button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.desktop-nav {
+  display:none
+}
+
+.menu-toggle {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  justify-content:center;
+  align-items:center;
+  width:32px;
+  height:32px;
+  padding:6px;
+  border:0;
+  background:none
+}
+
+.menu-toggle span {
+  width:20px;
+  height:1.5px;
+  background:var(--ink)
+}
+
+.hero-title {
+  left:2.133%;
+  top:24.202%;
+  width:59.467%
+}
+
+.section-heading {
+  height:51px;
+  gap:12px;
+  padding:12px 0;
+  font-size:22px;
+  letter-spacing:2.5px
+}
+
+.section-number {
+  font-size:20px
+}
+
+.heading-rule {
+  width:32px
+}
+
+.concept {
+  height:calc(100vw * 590 / 375);
+  max-height:1000px;
+  padding-top:20px;
+  isolation:isolate
+}
+
+.concept>.section-heading,.works>.section-heading {
+  margin-left:20px
+}
+
+.concept-art {
+  position:absolute;
+  inset:-16px 0 auto;
+  width:100%;
+  margin:0;
+  z-index:-1
+}
+
+.concept-art img {
+  aspect-ratio:375/666
+}
+
+.sprig {
+  display:none
+}
+
+.about {
+  height:auto;
+  min-height:290px;
+  padding:20px 36px 20px 28px;
+  display:grid;
+  grid-template-columns:110px minmax(0,1fr);
+  column-gap:28px;
+  align-content:start;
+  background:#f4f0e6
+}
+
+.about>.section-heading {
+  grid-column:1/-1;
+  margin:0 0 9px -8px
+}
+
+.about-photo {
+  position:static;
+  width:110px;
+  margin-top:5px
+}
+
+.about-photo img {
+  aspect-ratio:1
+}
+
+.about-copy {
+  position:static;
+  width:auto;
+  font-size:12px;
+  line-height:22px;
+  letter-spacing:0;
+  color:var(--ink)
+}
+
+.desktop-paragraph,.desktop-break {
+  display:none
+}
+
+.view-more {
+  position:static;
+  grid-column:2;
+  justify-self:end;
+  margin-top:9px;
+  width:max-content;
+  min-width:111px;
+  white-space:nowrap;
+  -webkit-tap-highlight-color: transparent;
+  height:32px;
+  padding:8px 0;
+  gap:8px;
+  border:0;
+  border-radius:0;
+  font-size:13px;
+  letter-spacing:1px
+}
+
+.view-more:active {
+  background-color: #D9D4CB;
+  transition: none;
+}
+
+/* Recolor the browser's temporary tap feedback only on mobile work links. */
+.work-card > a {
+  -webkit-tap-highlight-color: #D9D4CB;
+}
+
+.desktop-arrow {
+  display:none
+}
+
+.mobile-arrow {
+  display:block;
+  flex-shrink:0
+}
+
+.works {
+  height:auto;
+  padding:20px 20px 32px
+}
+
+.works>.section-heading {
+  margin:0
+}
+
+.works-grid {
+  width:100%;
+  margin:16px 0 0;
+  transform:none;
+  grid-template-columns:1fr;
+  gap:24px
+}
+
+.work-card img {
+  aspect-ratio:335/160
+}
+
+.work-card h3 {
+  margin-top:10px;
+  font-size:14px;
+  line-height:20px;
+  letter-spacing:0;
+  color:var(--ink)
+}
+
+.work-separator,.sp-only {
+  display:inline
+}
+
+.work-type {
+  display:inline
+}
+
+.pc-only {
+  display:none
+}
+
+.contact {
+  height:161px;
+  padding-top:6px;
+  background:#f3f2ec
+}
+
+.contact-background {
+  opacity:.7
+}
+
+.contact-background img {
+  width:100%;
+  left:0;
+  top:0;
+  aspect-ratio:375.311/211
+}
+
+.contact h2 {
+  height:51px;
+  padding:12px 0;
+  font:300 22px/27px var(--serif);
+  letter-spacing:2.5px
+}
+
+.contact-title {
+  display:none
+}
+
+.contact>p {
+  font-size:14px;
+  line-height:22px;
+  letter-spacing:0;
+  margin-top:7px;
+  color:#32312b
+}
+
+.contact-button {
+  width:128px;
+  height:35px;
+  margin-top:20px;
+  background:var(--sage);
+  font:400 12px var(--serif);
+  letter-spacing:1.5px;
+  border-radius:20px
+}
+
+.site-footer {
+  height:48px
+}
+
+.site-footer small {
+  font:300 11px var(--serif);
+  letter-spacing:1px;
+  color:var(--sage)
+}
+
+
+}
+
+
+@media(min-width:500px) and (max-width:767px) {
+  .about {
+  grid-template-columns:minmax(110px,32%) 1fr;
+  padding-bottom:28px;
+  gap:16px 28px
+}
+
+.about-photo {
+  width:100%
+}
+
+.about-copy {
+  font-size:14px;
+  line-height:1.9
+}
+
+.works-grid {
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto
+}
+
+.concept-art {
+  max-width:565px;
+  left:50%;
+  transform:translateX(-50%)
+}
+
+.concept {
+  height:890px
+}
+
+.hero-background img {
+  object-position:center bottom
+}
+
+
+}
+
+
+@media(max-width:359px) {
+  .about {
+  padding-right:20px;
+  padding-left:20px;
+  grid-template-columns:90px minmax(0,1fr);
+  column-gap:20px
+}
+
+.about-photo {
+  width:90px
+}
+
+.about>.section-heading {
+  margin-left:0
+}
+
+.work-card h3 {
+  font-size:12px
+}
+
+
+}
+
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+  scroll-behavior:auto
+}
+
+
+}
+
+
+
+.hero-title { margin: 0; }
+.hero-title img { width: 100%; height: auto; }
+
+/* Work imagery owns its overlay so hover never changes card geometry. */
+.work-image {
+  position: relative;
+}
+
+.work-overlay {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .work-card .work-type {
+    display: none;
+  }
+
+  .work-overlay {
+    position: absolute;
+    inset: 15px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #403D38;
+    font: 300 16px/1.75 var(--japanese);
+    letter-spacing: 1.6px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .work-image:hover .work-overlay,
+  .work-image:focus-visible .work-overlay,
+  .work-card a:focus-visible .work-overlay {
+    opacity: 1;
+  }
+
+  .work-image:focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 5px;
+  }
+}
+
+/* Wider touch screens can read the category without a hover gesture. */
+@media (min-width: 768px) and (hover: none) {
+  .work-overlay {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-overlay {
+    transition: none;
+  }
+}
+
+/* Keep the fixed header transparent at every scroll position. */
+:root {
+  --header-height: 89px;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 auto auto 50%;
+  transform: translateX(-50%);
+  width: min(100%, 1440px);
+  height: var(--header-height);
+  z-index: 20;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Reserve space when navigating to sections without moving the hero layout. */
+html {
+  scroll-padding-top: calc(var(--header-height) + 16px);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 64px;
+  }
+}
+

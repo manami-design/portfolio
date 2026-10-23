@@ -1,0 +1,129 @@
+/* Page-specific styles leave the completed TOP and ABOUT layouts untouched. */
+.contact-page-content { background: #fff; }
+.contact-introduction {
+  min-height: 401px;
+  padding: 116px 24px 49px;
+  text-align: center;
+}
+.contact-introduction h1 {
+  margin: 0;
+  font: 500 30px/36px var(--serif);
+  color: #373833;
+}
+.contact-intro-pc {
+  margin-top: 95px;
+  color: #77786f;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.56px;
+}
+.contact-intro-sp { display: none; }
+.contact-form-section { --field-background: #fcfbf8; min-height: 815px; padding: 56px 20px 75px; }
+#contact-form { width: 100%; max-width: 567px; margin: 0 auto; }
+.contact-fields { display: flex; flex-direction: column; gap: 32px; }
+.contact-field { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.contact-field label { font-size: 12px; font-weight: 400; line-height: 17px; color: #373833; }
+.contact-field input, .contact-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 56px;
+  padding: 12px 16px;
+  border: 1px solid #d9d6ce;
+  border-radius: 8px;
+  background: var(--field-background);
+  color: var(--ink);
+  font: 300 16px/24px var(--japanese);
+}
+.contact-field textarea { height: 180px; min-height: 180px; resize: vertical; }
+/* Cover Chrome's autofill paint without disabling autofill or changing borders. */
+.contact-field :is(input, textarea):is(:autofill, :-webkit-autofill) {
+  -webkit-box-shadow: 0 0 0 1000px var(--field-background) inset;
+  box-shadow: 0 0 0 1000px var(--field-background) inset;
+  -webkit-text-fill-color: var(--ink);
+  color: var(--ink);
+  caret-color: var(--ink);
+}
+.contact-field input::placeholder, .contact-field textarea::placeholder { opacity: 0; }
+.contact-field input:focus-visible, .contact-field textarea:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+.contact-field [aria-invalid="true"] { border-color: #965b50; }
+.contact-field .field-error { color: #965b50; font-size: 12px; line-height: 1.7; }
+.field-error[hidden] { display: none; }
+.contact-form-actions { margin-top: 73px; text-align: center; }
+.contact-submit {
+  display: block;
+  width: 294px;
+  max-width: 100%;
+  height: 51px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 17px;
+  background: #a8aa9b;
+  color: #14110D;
+  font: 200 15px var(--japanese);
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.contact-submit:disabled { cursor: default; }
+.contact-submit:active:not(:disabled) { background: #D9D4CB; transition: none; }
+.delivery-notice { margin-top: 12px; color: #77786f; font-size: 11px; line-height: 1.8; }
+.form-status { margin-top: 16px; color: #63594A; font-size: 12px; line-height: 1.8; text-align: center; white-space: pre-line; }
+.form-status:empty { margin: 0; }
+.form-status.has-errors { color: #965b50; }
+.delivery-error-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #63594A;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.delivery-error-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #965b50;
+  border-radius: 50%;
+  color: #965b50;
+  font: 500 11px/1 sans-serif;
+}
+.delivery-error-detail {
+  display: block;
+  margin-top: 3px;
+  color: #63594A;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.contact-field input, .contact-field textarea { scroll-margin-top: calc(var(--header-height) + 24px); }
+@media (hover: hover) {
+  .contact-submit:hover:not(:disabled) { background: #D9D4CB; }
+}
+@media (max-width: 767px) {
+  .contact-page-content { padding-top: 64px; background: #faf9f5; }
+  .contact-introduction { min-height: 0; padding: 24px 20px 0; text-align: left; }
+  .contact-introduction h1 { font: 300 28px/34px var(--serif); letter-spacing: 2px; color: var(--ink); }
+  .contact-intro-pc { display: none; }
+  .contact-intro-sp { display: block; margin-top: 32px; color: var(--sage); font-size: 12px; line-height: 20px; }
+  .contact-form-section { --field-background: #fff; min-height: 0; padding: 24px 20px 26px; }
+  .contact-fields { gap: 16px; }
+  .contact-field { gap: 6px; }
+  .contact-field label { color: var(--ink); }
+  .contact-field input, .contact-field textarea { height: 44px; padding: 10px 12px; border-radius: 6px; background: var(--field-background); }
+  /* 16px entered text avoids iOS focus zoom; placeholders keep Figma's 12px size. */
+  .contact-field input::placeholder, .contact-field textarea::placeholder { opacity: 1; color: #aaa89e; font-size: 12px; }
+  .contact-field textarea { min-height: 120px; height: 120px; }
+  .contact-form-actions { margin-top: 24px; }
+  .contact-submit { width: 100%; height: 48px; border-radius: 24px; background: var(--sage); font-size: 14px; font-weight: 400; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-submit { transition: none; }
+}

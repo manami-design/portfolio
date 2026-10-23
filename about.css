@@ -1,0 +1,94 @@
+/* ABOUT styles are scoped so the TOP composition remains unchanged. */
+.about-page-content { background: #faf9f5; }
+.about-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 77px;
+  font: 300 20px var(--serif);
+  letter-spacing: 3.36px;
+}
+.heading-dash { font-size: 30px; }
+.heading-japanese { font-size: 18px; }
+.profile-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 41.969% minmax(0, 1fr);
+  grid-template-rows: 87px auto;
+  column-gap: 10.994%;
+  min-height: 829px;
+  padding: 105px 19.16% 120px 8.194%;
+  background: #fbfbfb;
+}
+.profile-section h1 { grid-column: 2; margin: 0; }
+.profile-photo { grid-column: 1; grid-row: 1 / 3; align-self: start; margin-top: 20px; width: 100%; }
+.profile-photo img { width: 100%; aspect-ratio: 439 / 346; object-fit: cover; }
+.profile-bio { grid-column: 2; min-width: 0; padding-top: 20px; }
+.profile-intro { font-size: 20px; font-weight: 400; color: #373833; white-space: nowrap; }
+.profile-story { margin-top: 35px; font-size: 15px; line-height: 2; color: #57554f; }
+.profile-story p + p { margin-top: 30px; }
+.profile-decoration { position: absolute; right: 14%; bottom: 85px; transform: rotate(46.31deg) skewX(8.08deg); }
+.career-section { position: relative; min-height: 1020px; background: #fcfbf8; padding: 45px 8.333% 140px; }
+.career-section > h2, .skills-section > h2 { margin-left: 39px; }
+.career-timeline { position: relative; margin: 12px 0 0 40px; max-width: 957px; }
+.career-timeline ol { list-style: none; margin: 0; padding: 0 0 0 57px; display: flex; flex-direction: column; gap: 53px; }
+.career-item { position: relative; display: grid; grid-template-columns: 99px minmax(0, 1fr); color: #57554f; letter-spacing: 3.36px; }
+.career-year { font-size: 20px; font-weight: 500; line-height: 44px; }
+.career-detail h3 { min-height: 44px; font-size: 20px; font-weight: 500; line-height: 44px; }
+.career-detail p { font-size: 15px; line-height: 28px; }
+.timeline-dot { position: absolute; left: -57px; top: 20px; }
+.timeline-line { position: absolute; left: 6px; top: 33px; max-width: none; transform: rotate(89.92deg); transform-origin: left top; }
+.career-decoration { position: absolute; right: 14%; bottom: 80px; transform: rotate(52.17deg) skewX(19.54deg); }
+.skills-section { min-height: 510px; padding: 45px 8.333% 100px; background: #fff; }
+.skills-grid { max-width: 923px; margin: 16px auto 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 31px; }
+.skill-card { min-height: 234px; padding: 32px 30px; background: #f8f8f7; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+.skill-icon { height: 62px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.skill-icon img { max-width: none; }
+.skill-figma img { transform: rotate(43.03deg); }
+.skill-text h3 { font: 400 22px/16px var(--serif); letter-spacing: 3.36px; color: #57554f; }
+.skill-text p { margin-top: 18px; font-size: 16px; line-height: 28px; letter-spacing: 3.36px; color: #57554f; }
+/* Leave a small buffer before the profile text meets the decoration near 1135px. */
+@media (min-width: 768px) and (max-width: 1159.98px) {
+  .profile-decoration, .career-decoration { display: none; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .profile-section { padding-right: 8%; grid-template-columns: 40% minmax(0,1fr); gap: 24px 7%; }
+  .profile-intro { font-size: clamp(14px, 1.39vw, 20px); }
+  .profile-story { font-size: 14px; }
+  .career-detail h3, .career-year { font-size: 17px; letter-spacing: 1px; }
+  .career-item { grid-template-columns: 80px minmax(0, 1fr); letter-spacing: 1px; }
+  .skill-card { padding: 24px 12px; }
+  .skill-text p { font-size: 13px; letter-spacing: 1px; }
+}
+@media (max-width: 767px) {
+  .about-page-content { padding-top: 64px; }
+  .about-section-heading { height: auto; gap: 9px; font-size: 16px; letter-spacing: 0; font-weight: 400; line-height: 19px; color: var(--sage); }
+  .heading-dash, .heading-japanese { font-size: 12px; }
+  .profile-section { display: block; min-height: 694px; padding: 24px 20px 32px; background: #faf9f5; }
+  .profile-section h1 { margin: 0 0 32px; height: 34px; font-size: 28px; font-weight: 300; letter-spacing: 2px; line-height: 34px; color: var(--ink); }
+  .profile-section h1 .heading-dash, .profile-section h1 .heading-japanese { display: none; }
+  .profile-photo { display: block; margin: 0; }
+  .profile-photo img { aspect-ratio: 335 / 220; }
+  .profile-bio { padding-top: 22px; }
+  .profile-intro { font-size: 13px; line-height: 22px; font-weight: 300; color: var(--ink); }
+  .profile-story { font-size: 13px; line-height: 22px; color: var(--ink); margin-top: 22px; }
+  .profile-story p + p { margin-top: 22px; }
+  .profile-decoration, .career-decoration, .timeline-dot, .timeline-line { display: none; }
+  .career-section { min-height: 0; padding: 20px; background: #fff; }
+  .career-section > h2, .skills-section > h2 { margin-left: 0; }
+  .career-timeline { margin: 16px 0 0; max-width: none; }
+  .career-timeline ol { padding: 0; gap: 16px; }
+  .career-item { grid-template-columns: 48px minmax(0,1fr); gap: 12px; letter-spacing: 0; }
+  .career-year { font: 500 14px/normal var(--serif); color: var(--ink); }
+  .career-detail h3 { font-size: 14px; line-height: normal; min-height: 0; color: var(--ink); }
+  .career-detail p { margin-top: 4px; font-size: 13px; line-height: normal; }
+  .skills-section { min-height: 307px; padding: 20px; background: #faf9f5; }
+  .skills-grid { margin: 19px 0 0; padding: 6px 1px; grid-template-columns: 1fr; gap: 12px; }
+  .skill-card { min-height: 0; flex-direction: row; justify-content: flex-start; gap: 15px; padding: 12px 15px; border: 1px solid #d9d6ce; border-radius: 8px; background: #fff; text-align: left; }
+  .skill-icon { width: 40px; height: 40px; }
+  .skill-figma { width: 42.401px; height: 42.401px; }
+  .skill-wix { width: 39px; height: 31.2px; }
+  .skill-text { min-width: 0; }
+  .skill-text h3 { font-size: 14px; line-height: normal; letter-spacing: 0; color: var(--ink); }
+  .skill-text p { margin-top: 2px; font-size: 11px; line-height: normal; letter-spacing: 0; color: var(--sage); }
+}
